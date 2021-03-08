@@ -1,0 +1,80 @@
+package com.pactera.jfjctb.model;
+
+/**
+ * 对应数据库表 ：JFJC_USER_PERMISSION
+ */
+public class UserPermission {
+    public String   umh;                     //用户号
+    public String   user_name;               //用户名
+    public String   user_email;              //用户邮箱
+    public String   dept_id;                 //所属部门ID
+    public Integer  role_type;               //所属角色
+    public String   other1;                  //扩展字段1
+    public String   other2;                  //扩展字段2
+
+    public DeptBranches deptBranches;        //部门相信信息
+
+    public String getUmh() {
+        return umh;
+    }
+
+    public void setUmh(String umh) {
+        this.umh = umh;
+    }
+
+    public String getUser_name() {
+        return user_name;
+    }
+
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
+    }
+
+    public String getUser_email() {
+        return user_email;
+    }
+
+    public void setUser_email(String user_email) {
+        this.user_email = user_email;
+    }
+
+    public String getDept_id() {
+        return dept_id;
+    }
+
+    public void setDept_id(String dept_id) {
+        this.dept_id = dept_id;
+    }
+
+    public Integer getRole_type() {
+        return role_type;
+    }
+
+    public void setRole_type(Integer role_type) {
+        this.role_type = role_type;
+    }
+
+    public String getOther1() {
+        return other1;
+    }
+
+    public void setOther1(String other1) {
+        this.other1 = other1;
+    }
+
+    public String getOther2() {
+        return other2;
+    }
+
+    public void setOther2(String other2) {
+        this.other2 = other2;
+    }
+
+    public DeptBranches getDeptBranches() {
+        return deptBranches;
+    }
+
+    public void setDeptBranches(DeptBranches deptBranches) {
+        this.deptBranches = deptBranches;
+    }
+}

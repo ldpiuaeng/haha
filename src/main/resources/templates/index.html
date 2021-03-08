@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,viewport-fit=cover">
+    <title>机房检测</title>
+    <link rel="stylesheet" type="text/css"   href="./style/weui.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="https://res.wx.qq.com/open/libs/weui/1.1.2/weui-for-work.css">-->
+</head>
+<body ontouchstart>
+<div class="page">
+    <div class="page__hd">
+        <h1 class="page__title">填报</h1>
+    </div>
+    <form action="/demo/testSaveTask" method="post" enctype="multipart/form-data">
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label  class="weui-label">机房环境</label></div>
+        </div>
+
+                <div class="weui-cells__title">是否异常</div>
+                <div class="weui-cells">
+                    <div class="weui-cell weui-cell_select">
+                        <div class="weui-cell__bd">
+                            <select id = "select1" class="weui-select" name="select1">
+                                <option value="1">请选择</option>
+                                <option value="2">干净整洁，无杂物</option>
+                                <option value="3">异常</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+        <div id = "optionmodule" style="display:none;">
+                <div class="weui-cells__title">异常说明</div>
+                <div class="weui-cells weui-cells_form">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+                            <div class="weui-textarea-counter"><span>0</span>/200</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page">
+                    <div class="weui-cells weui-cells_form">
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <div class="weui-uploader">
+
+                                    <div class="weui-uploader__hd">
+                                        <p class="weui-uploader__title">图片上传(最多三张)：</p>
+                                    </div>
+                                    <div class="weui-uploader__bd">
+                                        <ul class="weui-uploader__files" id="uploaderFiles1">
+                                        </ul>
+                                        <div class="weui-uploader__input-box">
+                                            <input id="uploaderInput1" class="weui-uploader__input zjxfjs_file" type="file" accept="image/*" multiple="" capture="camera"/>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label  class="weui-label">机房空调</label></div>
+        </div>
+        <div class="weui-cells__title">是否异常</div>
+        <div class="weui-cells">
+            <div class="weui-cell weui-cell_select">
+                <div class="weui-cell__bd">
+                    <select id = "select2" class="weui-select" name="select1">
+                        <option value="1">请选择</option>
+                        <option value="2">制冷正常，无漏水</option>
+                        <option value="3">异常</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id = "optionmodule2" style="display:none;">
+            <div class="weui-cells__title">异常说明</div>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+                        <div class="weui-textarea-counter"><span>0</span>/200</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="weui-cells weui-cells_form">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <div class="weui-uploader">
+                                <div class="weui-uploader__hd">
+                                    <p class="weui-uploader__title">图片上传(最多三张)：</p>
+                                </div>
+                                <div class="weui-uploader__bd">
+                                    <ul class="weui-uploader__files" id="uploaderFiles2">
+                                    </ul>
+                                    <div class="weui-uploader__input-box">
+                                        <input id="uploaderInput2" class="weui-uploader__input zjxfjs_file" type="file" accept="image/*" multiple="" capture="camera"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label  class="weui-label">机房温度</label></div>
+        </div>
+        <div class="weui-cells__title">是否异常</div>
+        <div class="weui-cells">
+            <div class="weui-cell weui-cell_select">
+                <div class="weui-cell__bd">
+                    <select id = "select3" class="weui-select" name="select1">
+                        <option value="1">请选择</option>
+                        <option value="2">机房温度在18-26摄氏度之间</option>
+                        <option value="3">异常</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id = "optionmodule3" style="display:none;">
+            <div class="weui-cells__title">异常说明</div>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+                        <div class="weui-textarea-counter"><span>0</span>/200</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="weui-cells weui-cells_form">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <div class="weui-uploader">
+                                <div class="weui-uploader__hd">
+                                    <p class="weui-uploader__title">图片上传(最多三张)：</p>
+                                </div>
+                                <div class="weui-uploader__bd">
+                                    <ul class="weui-uploader__files" id="uploaderFiles3">
+                                    </ul>
+                                    <div class="weui-uploader__input-box">
+                                        <input id="uploaderInput3" class="weui-uploader__input zjxfjs_file" type="file" accept="image/*" multiple="" capture="camera"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label  class="weui-label">设备状态</label></div>
+        </div>
+        <div class="weui-cells__title">是否异常</div>
+        <div class="weui-cells">
+            <div class="weui-cell weui-cell_select">
+                <div class="weui-cell__bd">
+                    <select id = "select4" class="weui-select" name="select1">
+                        <option value="1">请选择</option>
+                        <option value="2">正常开启，表面无灰尘</option>
+                        <option value="3">异常</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id = "optionmodule4" style="display:none;">
+            <div class="weui-cells__title">异常说明</div>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+                        <div class="weui-textarea-counter"><span>0</span>/200</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="weui-cells weui-cells_form">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <div class="weui-uploader">
+                                <div class="weui-uploader__hd">
+                                    <p class="weui-uploader__title">图片上传(最多三张)：</p>
+                                </div>
+                                <div class="weui-uploader__bd">
+                                    <ul class="weui-uploader__files" id="uploaderFiles4">
+                                    </ul>
+                                    <div class="weui-uploader__input-box">
+                                        <input id="uploaderInput4" class="weui-uploader__input zjxfjs_file" type="file" accept="image/*" multiple="" capture="camera"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label  class="weui-label">机柜线缆</label></div>
+        </div>
+        <div class="weui-cells__title">是否异常</div>
+        <div class="weui-cells">
+            <div class="weui-cell weui-cell_select">
+                <div class="weui-cell__bd">
+                    <select id = "select5" class="weui-select" name="select1">
+                        <option value="1">请选择</option>
+                        <option value="2">梳理整齐，无松动</option>
+                        <option value="3">异常</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id = "optionmodule5" style="display:none;">
+            <div class="weui-cells__title">异常说明</div>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+                        <div class="weui-textarea-counter"><span>0</span>/200</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="weui-cells weui-cells_form">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <div class="weui-uploader">
+                                <div class="weui-uploader__hd">
+                                    <p class="weui-uploader__title">图片上传(最多三张)：</p>
+                                </div>
+                                <div class="weui-uploader__bd">
+                                    <ul class="weui-uploader__files" id="uploaderFiles5">
+                                    </ul>
+                                    <div class="weui-uploader__input-box">
+                                        <input id="uploaderInput5" class="weui-uploader__input zjxfjs_file" type="file" accept="image/*" multiple="" capture="camera"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label  class="weui-label">USP状态</label></div>
+        </div>
+        <div class="weui-cells__title">是否异常</div>
+        <div class="weui-cells">
+            <div class="weui-cell weui-cell_select">
+                <div class="weui-cell__bd">
+                    <select id = "select6" class="weui-select" name="select1">
+                        <option value="1">请选择</option>
+                        <option value="2">两个指示灯为绿色常亮</option>
+                        <option value="3">异常</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id = "optionmodule6" style="display:none;">
+            <div class="weui-cells__title">异常说明</div>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+                        <div class="weui-textarea-counter"><span>0</span>/200</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="weui-cells weui-cells_form">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <div class="weui-uploader">
+                                <div class="weui-uploader__hd">
+                                    <p class="weui-uploader__title">图片上传(最多三张)：</p>
+                                </div>
+                                <div class="weui-uploader__bd">
+                                    <ul class="weui-uploader__files" id="uploaderFiles6">
+                                    </ul>
+                                    <div class="weui-uploader__input-box">
+                                        <input id="uploaderInput6" class="weui-uploader__input zjxfjs_file" type="file" accept="image/*" multiple="" capture="camera"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="weui-cell">
+            <div class="weui-cell__hd"><label  class="weui-label">机房工具</label></div>
+        </div>
+        <div class="weui-cells__title">是否异常</div>
+        <div class="weui-cells">
+            <div class="weui-cell weui-cell_select">
+                <div class="weui-cell__bd">
+                    <select id = "select7" class="weui-select" name="select1">
+                        <option value="1">请选择</option>
+                        <option value="2">机房工具无缺失（温湿度计，应急手电，工具箱，机房进出登记本，灭火）</option>
+                        <option value="3">异常</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id = "optionmodule7" style="display:none;">
+            <div class="weui-cells__title">异常说明</div>
+            <div class="weui-cells weui-cells_form">
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <textarea class="weui-textarea" placeholder="请输入文本" rows="3"></textarea>
+                        <div class="weui-textarea-counter"><span>0</span>/200</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="page">
+                <div class="weui-cells weui-cells_form">
+                    <div class="weui-cell">
+                        <div class="weui-cell__bd">
+                            <div class="weui-uploader">
+                                <div class="weui-uploader__hd">
+                                    <p class="weui-uploader__title">图片上传(最多三张)：</p>
+                                </div>
+                                <div class="weui-uploader__bd">
+                                    <ul class="weui-uploader__files" id="uploaderFiles7">
+                                    </ul>
+                                    <div class="weui-uploader__input-box">
+                                        <input id="uploaderInput7" class="weui-uploader__input zjxfjs_file" type="file" accept="image/*" multiple="" capture="camera"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="weui-btn-area">
+               <!-- <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">确定</a>-->
+                <input class="weui-btn weui-btn_primary" type="submit" value="提交" id=""/>
+            </div>
+    </form>
+    </div>
+</div>
+<script src="./js/jquery.min.js"></script>
+<!--<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>-->
+<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="https://res.wx.qq.com/open/libs/weuijs/1.0.0/weui.min.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        var sysPath = getSysPath();
+        $(".weui-select").change(function(){
+            var value1 = $("#select1").val();
+            var value2 = $("#select2").val();
+            var value3 = $("#select3").val();
+            var value4 = $("#select4").val();
+            var value5 = $("#select5").val();
+            var value6 = $("#select6").val();
+            var value7 = $("#select7").val();
+            if(3 == value1){
+                $("#optionmodule"). show();
+                upload("uploaderInput1","uploaderFiles1");
+            }else{
+                $("#optionmodule"). hide();
+            }
+            if(3 == value2){
+                $("#optionmodule2"). show();
+                upload("uploaderInput2","uploaderFiles2");
+            }else{
+                $("#optionmodule2"). hide();
+            }
+            if(3 == value3){
+                $("#optionmodule3"). show();
+                upload("uploaderInput3","uploaderFiles3");
+            }else{
+                $("#optionmodule3"). hide();
+            }
+            if(3 == value4){
+                $("#optionmodule4"). show();
+                upload("uploaderInput4","uploaderFiles4");
+            }else{
+                $("#optionmodule4"). hide();
+            }
+            if(3 == value5){
+                $("#optionmodule5"). show();
+                upload("uploaderInput5","uploaderFiles5");
+            }else{
+                $("#optionmodule5"). hide();
+            }
+            if(3 == value6){
+                $("#optionmodule6"). show();
+                upload("uploaderInput6","uploaderFiles6");
+            }else{
+                $("#optionmodule6"). hide();
+            }
+            if(3 == value7){
+                $("#optionmodule7"). show();
+                upload("uploaderInput7","uploaderFiles7");
+            }else{
+                $("#optionmodule7"). hide();
+            }
+        });
+
+    });
+
+
+    function upload(struploaderInput,struploaderFiles) {
+        var fileArr = new Array();
+        var tmpl = '<li class="weui-uploader__file" style="background-image:url(#url#)"></li>',
+            $gallery = $("#gallery"), $galleryImg = $("#galleryImg"),
+            $uploaderInput = $("#"+struploaderInput),
+            $uploaderFiles = $("#"+struploaderFiles);
+
+        $uploaderInput.on("change", function(e){
+            var src, url = window.URL || window.webkitURL || window.mozURL, files = e.target.files;
+            for (var i = 0, len = files.length; i < len; ++i) {
+                var file = files[i];
+                if(length + i + 1 > 3){
+                    break;
+                }
+                fileArr.push(file);
+                if (url) {
+                    src = url.createObjectURL(file);
+                } else {
+                    src = e.target.result;
+                }
+
+                $uploaderFiles.append($(tmpl.replace('#url#', src)));
+            }
+            //checkPhotoSize(fileArr);
+        });
+        var index; //第几张图片
+        $uploaderFiles.on("click", "li", function(){
+            index = $(this).index();
+            $galleryImg.attr("style", this.getAttribute("style"));
+            $gallery.fadeIn(100);
+        });
+        $gallery.on("click", function(){
+            $gallery.fadeOut(100);
+        });
+        //删除图片
+        $uploaderFiles.click(function() {
+            $uploaderFiles.find("li").eq(index).remove();
+            fileArr.splice(index,index);
+            checkPhotoSize(fileArr);
+        });
+    }
+   /* function checkPhotoSize(fileArr){
+        alert(fileArr.length);
+        if(fileArr.length>2){
+            $(".weui-uploader__input-box").hide();
+        }else{
+            $(".weui-uploader__input-box").show();
+        }
+    }*/
+
+    function getSysPath() {
+        var strPath = window.document.location.pathname;
+        return strPath.substring(0, strPath.substr(1).indexOf("/")+1);
+    }
+</script>
+</body>
+</html>
+
+

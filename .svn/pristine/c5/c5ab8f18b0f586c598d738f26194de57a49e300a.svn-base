@@ -1,0 +1,84 @@
+package com.pactera.jfjctb.model;
+
+import java.util.Date;
+import java.util.List;
+
+/**
+ * 对应数据库表 ：JFJC_DAILY_TASK
+ */
+public class DailyTask {
+
+    public String   task_id;          //任务id
+    public Date     task_dt;          //任务日期
+    public String   dept_id;          //部门id
+    public String   user_id;          //用户id
+    public String   other1;           //扩展字段1
+    public String   other2;           //扩展字段2
+
+    public DeptBranches deptBranches;       //部门详细信息
+    public List<TaskDetail> taskDetailList; //任务详细信息
+
+    public String getTask_id() {
+        return task_id;
+    }
+
+    public void setTask_id(String task_id) {
+        this.task_id = task_id;
+    }
+
+    public Date getTask_dt() {
+        return task_dt;
+    }
+
+    public void setTask_dt(Date task_dt) {
+        this.task_dt = task_dt;
+    }
+
+    public String getDept_id() {
+        return dept_id;
+    }
+
+    public void setDept_id(String dept_id) {
+        this.dept_id = dept_id;
+    }
+
+    public String getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(String user_id) {
+        this.user_id = user_id;
+    }
+
+    public String getOther1() {
+        return other1;
+    }
+
+    public void setOther1(String other1) {
+        this.other1 = other1;
+    }
+
+    public String getOther2() {
+        return other2;
+    }
+
+    public void setOther2(String other2) {
+        this.other2 = other2;
+    }
+
+    public DeptBranches getDeptBranches() {
+        return deptBranches;
+    }
+
+    public void setDeptBranches(DeptBranches deptBranches) {
+        this.deptBranches = deptBranches;
+    }
+
+    public List<TaskDetail> getTaskDetailList() {
+        return taskDetailList;
+    }
+
+    public void setTaskDetailList(List<TaskDetail> taskDetailList) {
+        this.taskDetailList = taskDetailList;
+    }
+}

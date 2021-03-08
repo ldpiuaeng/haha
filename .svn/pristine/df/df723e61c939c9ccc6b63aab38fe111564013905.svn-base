@@ -1,0 +1,27 @@
+server.port=9001
+
+#视图层控制 用mvc方式访问templates下的HTML
+spring.mvc.view.prefix=classpath:/templates/
+spring.mvc.view.suffix=.jsp
+spring.mvc.static-path-pattern=/static/**
+
+spring.thymeleaf.mode=HTML5
+spring.thymeleaf.encoding=UTF-8
+spring.thymeleaf.content-type=text/html
+
+#开发时关闭缓存,不然没法看到实时页面
+spring.thymeleaf.cache=false
+
+#thymeleaf这样配置就可以直接访问static下的HTML(和mvc访问方式二选一)
+spring.thymeleaf.prefix = classpath:/static/
+spring.thymeleaf.suffix = .html
+
+spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
+spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
+spring.datasource.username=bkr30
+spring.datasource.password=bkr30
+
+
+#在application.properties文件中引入日志配置文件
+#=====================================  log  =============================
+logging.config=classpath:logback-boot.xml

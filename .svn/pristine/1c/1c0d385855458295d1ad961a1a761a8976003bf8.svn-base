@@ -1,0 +1,63 @@
+package com.pactera.jfjctb.model;
+
+import java.util.Date;
+
+/**
+ * 对应数据库表：JFJC_DEPT_BRANCHES_REL
+ */
+public class DeptBranches {
+    public String dept_id;                   //部门id
+    public String dept_name;                 //部门名称
+    public String branches_num;              //网点号
+    public String dept_weixin_name;          //部门微信名称
+    public String other1;                    //扩展字段1
+    public String other2;                    //扩展字段2
+
+    public String getDept_id() {
+        return dept_id;
+    }
+
+    public void setDept_id(String dept_id) {
+        this.dept_id = dept_id;
+    }
+
+    public String getDept_name() {
+        return dept_name;
+    }
+
+    public void setDept_name(String dept_name) {
+        this.dept_name = dept_name;
+    }
+
+    public String getBranches_num() {
+        return branches_num;
+    }
+
+    public void setBranches_num(String branches_num) {
+        this.branches_num = branches_num;
+    }
+
+    public String getDept_weixin_name() {
+        return dept_weixin_name;
+    }
+
+    public void setDept_weixin_name(String dept_weixin_name) {
+        this.dept_weixin_name = dept_weixin_name;
+    }
+
+    public String getOther1() {
+        return other1;
+    }
+
+    public void setOther1(String other1) {
+        this.other1 = other1;
+    }
+
+    public String getOther2() {
+        return other2;
+    }
+
+    public void setOther2(String other2) {
+        this.other2 = other2;
+    }
+}

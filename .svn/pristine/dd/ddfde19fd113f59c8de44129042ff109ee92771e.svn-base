@@ -1,0 +1,79 @@
+package com.pactera.jfjctb.model;
+
+/**
+ * 对应数据库表 ：JFJC_TASK_DETAIL
+ */
+public class TaskDetail {
+    public String   id;                     //任务明细id
+    public String   task_id;                //任务id
+    public Integer  item_type;              //项目类型
+    public Integer  item_flag;              //项目状态
+    public String   item_state;             //项目说明
+    public byte[]   item_adjunct;           //项目附件照片
+    public String   other1;                 //扩展字段1
+    public String   other2;                 //扩展字段2
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getTask_id() {
+        return task_id;
+    }
+
+    public void setTask_id(String task_id) {
+        this.task_id = task_id;
+    }
+
+    public Integer getItem_type() {
+        return item_type;
+    }
+
+    public void setItem_type(Integer item_type) {
+        this.item_type = item_type;
+    }
+
+    public Integer getItem_flag() {
+        return item_flag;
+    }
+
+    public void setItem_flag(Integer item_flag) {
+        this.item_flag = item_flag;
+    }
+
+    public String getItem_state() {
+        return item_state;
+    }
+
+    public void setItem_state(String item_state) {
+        this.item_state = item_state;
+    }
+
+    public byte[] getItem_adjunct() {
+        return item_adjunct;
+    }
+
+    public void setItem_adjunct(byte[] item_adjunct) {
+        this.item_adjunct = item_adjunct;
+    }
+
+    public String getOther1() {
+        return other1;
+    }
+
+    public void setOther1(String other1) {
+        this.other1 = other1;
+    }
+
+    public String getOther2() {
+        return other2;
+    }
+
+    public void setOther2(String other2) {
+        this.other2 = other2;
+    }
+}

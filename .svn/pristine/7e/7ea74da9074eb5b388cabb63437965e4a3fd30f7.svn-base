@@ -1,0 +1,12 @@
+package com.pactera.jfjctb.dao;
+
+import com.pactera.jfjctb.model.UserPermission;
+import com.util.core.Mapper;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserMapper  extends Mapper<UserPermission> {
+
+    UserPermission findById(String umh);         // 通过ID查找
+
+}

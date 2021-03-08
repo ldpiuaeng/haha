@@ -1,0 +1,19 @@
+package com.pactera.jfjctb.dao;
+
+import com.pactera.jfjctb.model.DailyTask;
+import com.util.core.Mapper;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+public interface TaskMapper extends Mapper<DailyTask> {
+
+    List<DailyTask> findAll();              // 获取所有
+
+    DailyTask findById(Integer id);         // 通过ID查找
+
+    void save(DailyTask model);             // 持久化
+
+    void update(DailyTask model);           // 更新
+}
